@@ -28,6 +28,6 @@ class CreateTableType extends Migration
      */
     public function down()
     {
-        //
+        Schema::connection('mysql2')->drop('types');
     }
 }
