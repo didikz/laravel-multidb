@@ -13,7 +13,7 @@ class CreateTableType extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::connection('mysql2')->create('types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code')->index();
             $table->string('name');

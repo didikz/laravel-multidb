@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    protected $connection = 'mysql';
+    protected $connection = 'mysql2';
 
     public function posts()
     {

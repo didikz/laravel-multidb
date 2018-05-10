@@ -20,4 +20,10 @@ class PublishingController extends Controller
         $data['type'] = Type::with(['posts', 'mails'])->get();
         return response()->json($data);
     }
+
+    public function joinsameserver()
+    {
+        $data['post'] = Post::join('laramultidb2.types as db2type', 'posts.type_code', '=', 'db2type.code')->get();
+        return response()->json($data);
+    }
 }
